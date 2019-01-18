@@ -1,0 +1,132 @@
+/* Creado por Víctor Pascual Muñoz */
+@charset "utf-8";
+/* Colorzilla no funciona con pdf's, se utiliza paint en  la mayoría de los casos para sacar el color */
+body {
+    background-color: rgb(254, 246, 161);
+    font-family: sans-serif;
+    width: 98%;
+    margin-left: 1%;
+    font-size: 150%;
+}
+header {
+    /* background-color: blue; ESTO ES PARA PODER VER BIEN EL HEADER AL PRINCIPIO */
+    height: 130px;
+}
+div.titulo {
+    font-style: italic;
+    width: 100%;
+    height: 70%;
+    background-color: rgb(247, 167, 104);
+    text-align: center;
+    color: white;
+    text-shadow: 4px 1px red;  /*Parece que la sombra no se difumina en el ejemplo */
+    word-spacing: 10px;
+    letter-spacing: 3px;
+    font-size: 110%;
+}
+nav {
+    background-color: rgb(255, 255, 95);
+    height: 30%;
+    width: 99.5%;
+    text-align: center;
+    border: 5px solid red;
+    padding-top: 5px;
+}
+p.nav {
+    width: 20%;
+    float: left;
+    font-size: 18px;
+    margin-top: 3px;
+}
+a {
+    color: rgb(234, 181, 25);
+    /* 
+    width: 25%; 
+    NO FUNCIONA
+    lo contedré en párrafos aunque también se puede contener en una lista
+    */
+}
+main {
+    margin-top: 15px; 
+    height: 750px;
+    background: url(img/naranja2.svg) repeat-x top /30px, url(img/naranja2.svg) repeat-x bottom /45px;
+}
+article.rojo {
+    border: 5px red solid;
+    text-align: center;
+    width: 50%;
+    color: red;
+    height: 260px;
+    position: absolute;
+    left: 20%;
+    top: 30%;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    /* El color hay que ponerlo al final, al principio da problemAS */
+    background: url(img/naranja.png) repeat-y top left/ 50px, url(img/naranja.png) repeat-y top right / 50px rgb(246, 190, 129);
+    z-index: 2;
+    transition: 1s;
+}
+article.amarillo {
+    background-color: rgb(255, 255, 128);
+    border: 5px rgb(234, 205, 64) solid;
+    color: rgb(234, 205, 64);
+    width: 40%;
+    height: 260px;
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    z-index: 1;
+    transition: 1s;
+    opacity: 0.5;
+}
+article.azul {
+    background-color: rgb(204, 255, 255);
+    border: 5px rgb(158, 198, 200) solid;
+    color: orangered;
+    text-align: right;
+    width: 40%;
+    height: 260px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transition: 1s;
+    opacity: 0.5;
+}
+/* -----ESTO QUEDA GUAY Y ES SUAVE ----------------------------- */
+article.amarillo:hover, article.azul:hover {
+    animation: alfrente 1s linear forwards;
+}
+@keyframes alfrente {
+    from { z-index: 0; transform: scale(0.9); opacity: 0.5; }
+    to { z-index: 3; transform: scale(1.1); opacity: 1; }
+  }
+  /* --------------------------------------- */
+ul {
+    list-style: none;
+    margin-left: -25px;
+}
+ol {
+    list-style: upper-roman;
+}
+div.ventajas {
+    color: blue;
+    background-color: rgb(247, 167, 104);
+    padding-top: 3px;
+}
+div.copy {
+    color: red;
+    text-align: center;
+    background-color: rgb(255, 255, 95);
+    margin-top: -25px;
+}
+span.sub {
+    text-decoration: underline;
+}
+span.sup {
+    text-decoration: overline;
+    /* No funciona en Mozilla pero si en firefox */
+} 
